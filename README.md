@@ -1,7 +1,6 @@
 # SHMT
 [NeurIPS 2024] SHMT: Self-supervised Hierarchical Makeup Transfer via Latent Diffusion Models
 
-# Note: This code is just a preliminary organization and may not be completely correct. I've been too busy lately, I'll update the code and upload the pre-trained model when I have time to follow, sorry.
 
 ## Requirements
 
