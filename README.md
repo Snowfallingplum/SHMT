@@ -1,6 +1,19 @@
 # SHMT
-[NeurIPS 2024] SHMT: Self-supervised Hierarchical Makeup Transfer via Latent Diffusion Models
+[NeurIPS 2024] SHMT: Self-supervised Hierarchical Makeup Transfer via Latent Diffusion Models. 
 
+Work done during internship of Zhaoyang Sun at DAMO Academy, Alibaba Group.
+
+## News 
+
++ Our previous work " Content-Style Decoupling for Unsupervised Makeup Transfer without Generating Pseudo Ground Truth" was accepted by CVPR2024. [Paper link](https://arxiv.org/abs/2405.17240) and [code link](https://github.com/Snowfallingplum/CSD-MT).
+
+## The results of our SHMT
+
+![Image text](./asset/results.jpg)
+
+## Framework
+
+![Image text](./asset/network.jpg)
 
 ## Requirements
 
@@ -94,9 +107,33 @@ CUDA_VISIBLE_DEVICES=0 python makeup_inference_h4.py \
   --ddim_steps 50
 ```
 
+## Citation
+
+If this work is helpful for your research, please consider citing the following BibTeX entry.
+
+```text
+@article{sun2024shmt,
+  title={SHMT: Self-supervised Hierarchical Makeup Transfer via Latent Diffusion Models},
+  author={Sun, Zhaoyang and Xiong, Shengwu and Chen, Yaxiong and Du, Fei and Chen, Weihua, and Wang, Fang and Rong, Yi}
+  journal={Advances in neural information processing systems},
+  year={2024}
+}
+```
+
 ## Comments
 
 - Our code for the SHMT models builds heavily on [LDM](https://github.com/CompVis/latent-diffusion)
   and [Paint-by-Example](https://github.com/Fantasy-Studio/Paint-by-Example). 
   Thanks for open-sourcing!
+
+## License
+
+This work is licensed under a
+[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
+
+[![CC BY-NC-SA 4.0][cc-by-nc-sa-image]][cc-by-nc-sa]
+
+[cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
+[cc-by-nc-sa-image]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
+[cc-by-nc-sa-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
 
