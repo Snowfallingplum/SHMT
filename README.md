@@ -3,6 +3,9 @@
 
 Work done during internship of Zhaoyang Sun at DAMO Academy, Alibaba Group.
 
+## Note
+This is just a preliminary code collation and cannot be guaranteed to be completely correct. There may be some errors. I've been looking for a job lately and have been too busy. I will resubmit the organised code and pre-trained models once the job search is over.
+
 ## News 
 
 + Our previous work " Content-Style Decoupling for Unsupervised Makeup Transfer without Generating Pseudo Ground Truth" was accepted by CVPR2024. [Paper link](https://arxiv.org/abs/2405.17240) and [code link](https://github.com/Snowfallingplum/CSD-MT).
