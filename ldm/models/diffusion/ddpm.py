@@ -1382,7 +1382,7 @@ class LatentDiffusion(DDPM):
         return samples, intermediates
 
     @torch.no_grad()
-    def log_images(self, batch, N=8, n_row=4, sample=True, ddim_steps=200, ddim_eta=0.0, return_keys=None,
+    def log_images(self, batch, N=8, n_row=4, sample=True, ddim_steps=50, ddim_eta=0.0, return_keys=None,
                    quantize_denoised=True, inpaint=False, plot_denoise_rows=False, plot_progressive_rows=False,
                    plot_diffusion_rows=True, **kwargs):
 
@@ -1406,7 +1406,8 @@ class LatentDiffusion(DDPM):
         log["reconstruction"] = xrec
         log["reconstruction_bg"] = self.decode_first_stage(z_bg)
         log["source_HF"] = self.source_HF[:,0:1,::]
-        log["source_depth"] = F.pixel_shuffle(self.source_HF[:,1:,::], upscale_factor=4)
+        # log["source_depth"] = F.pixel_shuffle(self.source_HF[:,1:,::], upscale_factor=4)# h4
+        # log["source_depth"] = self.source_HF[:,1:,::] #h0
         log["ref_face"] = self.ref_face
         log["reconstruction_ref_LF"] = self.decode_first_stage(self.z_ref_LF)
         log['source_seg_onehot'] = self.to_rgb(self.source_seg_onehot)

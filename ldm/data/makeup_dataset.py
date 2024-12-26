@@ -42,11 +42,11 @@ class MakeupDataset(Dataset):
 
         self.appearance_aug = A.Compose([
             A.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2, hue=0.2, p=0.5)
-        ],is_check_shapes=False)
+        ])
 
         self.appearance_aug2 = A.Compose([
             A.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2, hue=0.2, p=1.0)
-        ],is_check_shapes=False)
+        ])
 
         self.spatial_aug_without_elas = A.Compose([
             A.Resize(height=286, width=286),
@@ -55,7 +55,7 @@ class MakeupDataset(Dataset):
                      border_mode=cv2.BORDER_CONSTANT,
                      value=0,
                      p=0.5)
-        ],is_check_shapes=False)
+        ])
 
         self.spatial_aug_with_elas = A.Compose([
             A.Resize(height=286, width=286),
@@ -73,7 +73,7 @@ class MakeupDataset(Dataset):
                 value=0,
                 p=0.8
             )
-        ],is_check_shapes=False)
+        ])
 
     def __len__(self):
         if not self.is_train:
@@ -309,7 +309,7 @@ class MakeupDatasetTest(Dataset):
         self.transforms = A.Compose([
             A.Resize(height=256, width=256),
             A.CenterCrop(height=256, width=256)
-        ],is_check_shapes=False)
+        ])
 
         # check segmentation maps
         for name in self.source_name_list:

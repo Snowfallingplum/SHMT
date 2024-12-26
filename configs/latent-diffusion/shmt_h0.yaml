@@ -61,7 +61,7 @@ model:
       params:
         embed_dim: 3
         n_embed: 8192
-        ckpt_path: /mnt/workspace/workgroup/sunzhaoyang/data/ldm/first_stage_models/vq-f4/model.ckpt
+        ckpt_path: /hy-tmp/scy/SHMT_code/vq-f4/model.ckpt
         ddconfig:
           double_z: false
           z_channels: 3
@@ -90,16 +90,16 @@ data:
       target: ldm.data.makeup_dataset.MakeupDataset
       params:
         is_train: True
-        image_path: /mnt/workspace/workgroup/sunzhaoyang/data/MakeupData2/images
-        seg_path: /mnt/workspace/workgroup/sunzhaoyang/data/MakeupData2/segs
-        depth_path: /mnt/workspace/workgroup/sunzhaoyang/data/MakeupData2/3d
+        image_path: /hy-tmp/scy/SHMT_code/SHMT_training_data/images
+        seg_path: /hy-tmp/scy/SHMT_code/SHMT_training_data/seg2
+        depth_path: /hy-tmp/scy/SHMT_code/SHMT_training_data/3d
     validation:
       target: ldm.data.makeup_dataset.MakeupDataset
       params:
         is_train: False
-        image_path: /mnt/workspace/workgroup/sunzhaoyang/data/MakeupData2/images
-        seg_path: /mnt/workspace/workgroup/sunzhaoyang/data/MakeupData2/segs
-        depth_path: /mnt/workspace/workgroup/sunzhaoyang/data/MakeupData2/3d
+        image_path: /hy-tmp/scy/SHMT_code/SHMT_training_data/images
+        seg_path: /hy-tmp/scy/SHMT_code/SHMT_training_data/seg2
+        depth_path: /hy-tmp/scy/SHMT_code/SHMT_training_data/3d
 
 
 lightning:
