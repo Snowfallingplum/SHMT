@@ -39,7 +39,7 @@ conda activate ldm
 
 ## Quick Start
 1. Download a pretrained autoencoding models from [LDM](https://github.com/CompVis/latent-diffusion), VQ-f4 is selected in our experiment.
-2. Download the pre trained model and place it in the checkpoints folder. [Baidu Drive](https://pan.baidu.com/s/1NBPkipowYPfV2XTkcioL8Q), password: jqj8.
+2. Download the pre trained model and place it in the checkpoints folder. [Google Drive](https://drive.google.com/drive/folders/1UJDdGCeE6qEqr3yi6BK1tEkwnjVKQDZY).
 3. We have provided some examples, just execute inference directly. **Please modify the parameters in the scripts according to your own situation**
 
 ``` 
