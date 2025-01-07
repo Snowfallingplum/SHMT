@@ -1163,12 +1163,12 @@ class LatentDiffusion(DDPM):
         loss = self.l_simple_weight * loss.mean()
 
         # optional loss_corr 
-        # LF_warp_GT = self.image_GT * self.source_face_seg
-        # predicted_LF_warp=F.pixel_shuffle(all_LF_warp[:, embed_dim * 1:embed_dim * 1 + 3*16, ::],upscale_factor=4)
-        # loss_corr = self.get_loss(predicted_LF_warp, LF_warp_GT, mean=False).mean([1, 2, 3])
-        # loss_dict.update({f'{prefix}/loss_corr': (1. * loss_corr).mean()})
-        # loss_corr = loss_corr / torch.exp(logvar_t) + logvar_t
-        # loss += 1.0 * loss_corr.mean()
+        LF_warp_GT = self.image_GT * self.source_face_seg
+        predicted_LF_warp=F.pixel_shuffle(all_LF_warp[:, embed_dim * 1:embed_dim * 1 + 3*16, ::],upscale_factor=4)
+        loss_corr = self.get_loss(predicted_LF_warp, LF_warp_GT, mean=False).mean([1, 2, 3])
+        loss_dict.update({f'{prefix}/loss_corr': (1. * loss_corr).mean()})
+        loss_corr = loss_corr / torch.exp(logvar_t) + logvar_t
+        loss += 1.0 * loss_corr.mean()
 
 
         loss_vlb = self.get_loss(model_output, target, mean=False).mean(dim=(1, 2, 3))
